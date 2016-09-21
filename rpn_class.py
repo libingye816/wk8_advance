@@ -37,8 +37,8 @@ class Calculator:
                 stack.append(self.coerce_number(operand))
             except ValueError:
                 operator_fn = self.OPERATORS[operand]
-                arg1 = stack.pop()
                 arg2 = stack.pop()
+                arg1 = stack.pop()
                 result = operator_fn(arg1, arg2)
                 stack.append(result)
 
