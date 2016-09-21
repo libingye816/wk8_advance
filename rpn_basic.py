@@ -37,8 +37,8 @@ def calculate(expression):
             stack.append(float(operand))
         except ValueError:
             operator_fn = OPERATORS[operand]
-            arg1 = stack.pop()
             arg2 = stack.pop()
+            arg1 = stack.pop()
             result = operator_fn(arg1, arg2)
             stack.append(result)
 
