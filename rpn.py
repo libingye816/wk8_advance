@@ -44,7 +44,10 @@ def main():
                 else:
                     cprint(str(token),end=' ')
             except ValueError:
-                cprint(token,'green',end=' ')
+                if token=='+' or token=='-' or token=='*' or token=='/':
+                    cprint(token,'green',end=' ')
+                else:
+                    cprint(token, 'blue', end=' ')
         result = calculate(arg)
         print('')
         print("Result: ", result)
